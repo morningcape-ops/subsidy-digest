@@ -205,6 +205,9 @@ def main():
     (SITE / "s").mkdir(parents=True, exist_ok=True)
     (SITE / "style.css").write_text((ROOT / "scripts" / "style.css").read_text(encoding="utf-8"), encoding="utf-8")
 
+    for f in (ROOT / "public").glob("*"):
+        (SITE / f.name).write_bytes(f.read_bytes())
+
     soon = sorted((r for r in live if r["end"]), key=lambda r: r["end"])[:10]
     today = datetime.now(JST).strftime("%Y-%m-%d")
     body = (
