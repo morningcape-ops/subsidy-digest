@@ -108,10 +108,10 @@ def summarize(rec, client):
         return {"summary": body[:120], "who": "", "points": [], "ai": False}
     msg = client.messages.create(
         model=MODEL,
-        max_tokens=600,
+        max_tokens=4000,
         messages=[{"role": "user", "content": PROMPT.format(**rec)}],
     )
-    raw = msg.content[0].text
+    raw = "".join(b.text for b in msg.content if b.type == "text")
     m = re.search(r"\{.*\}", raw, re.S)
     out = json.loads(m.group(0))
     out["ai"] = True
