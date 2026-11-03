@@ -1,0 +1,17 @@
+:root{--bg:#fff;--fg:#1c2330;--sub:#5b6577;--line:#e2e6ee;--accent:#0b6b4f;--warn:#b4301f}
+@media(prefers-color-scheme:dark){:root{--bg:#12161d;--fg:#e8ecf3;--sub:#9aa5b8;--line:#2a3140;--accent:#4cc29a;--warn:#ff8b78}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 system-ui,"Hiragino Sans","Yu Gothic",sans-serif}
+header,main,footer{max-width:760px;margin:0 auto;padding:0 16px}
+header{padding-top:16px;padding-bottom:8px;border-bottom:1px solid var(--line);font-weight:700}
+header a{color:var(--accent);text-decoration:none}
+h1{font-size:1.5rem;line-height:1.4}h2{font-size:1.15rem;margin-top:2rem}
+.lead{color:var(--sub)}
+.list{list-style:none;padding:0}.list li{padding:12px 0;border-bottom:1px solid var(--line)}
+.list a{color:var(--fg);font-weight:600}.list p{margin:.3rem 0 0;color:var(--sub);font-size:.92rem}
+.meta{color:var(--sub);font-size:.85rem}
+.badge{margin-left:8px;padding:1px 8px;border-radius:99px;background:var(--warn);color:#fff;font-size:.75rem}
+table{border-collapse:collapse;width:100%}th,td{border-bottom:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}
+th{width:7em;color:var(--sub);font-weight:600}
+.btn{display:inline-block;padding:10px 18px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none}
+.note,footer{color:var(--sub);font-size:.8rem}footer{padding-bottom:32px;margin-top:2rem}
